@@ -29,3 +29,18 @@
 </table>
 
   ## <p><i>So let's get started💥.</i></p> 
+
+  <table>
+    <tr>
+      <td>
+        <p>🕹️ Now drag and add your player from your <b><i>“Project”</i></b> tab to the <b><i>“Hierarchy”</i></b> tab. You can create an empty object in the “Hierarchy” window and place your player under it, your project will be more organized:)</p>
+        <p>🕹️ After doing this, click on your prefab model and follow the <b><i>“Prefab”</i></b> -> <b><i>“Unpack Completely”</i></b> steps.</p>
+        <p>🕹️ Great! Your model is now a <b><i>GameObject</i></b>.</p>
+        <img src = "https://github.com/Ozlem-goksun/Jr_s_World_3d/blob/main/Tut/step3-Add%20player.png" alt = "step3">
+        <p><i>"I used my own model for this, but you can use the model from the file you just downloaded.I may use different assets during this project, but don't worry, there will be differences that you can handle.If you get stuck, you can contact me or get information from the video source with the link I shared at the beginning."</i></p>
+        <p></p>
+        <p>🕹️ Now add a ground to the scene on which your player can stand, for this you can click on the <b><i>"Hierarcy"</i></b> window and go to <b><i>“3D Object”</i></b> -> <b><i>“Plane”</i></b>.</p>
+        <p>🕹️ </p>
+      </td>
+    </tr>
+  </table>
