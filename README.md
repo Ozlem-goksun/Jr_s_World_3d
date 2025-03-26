@@ -7,8 +7,9 @@
     <td style="vertical-align: top; width: 30%;">
      <p>Before we start making our game, we have to make a few preparations.It is useful to install a few packages that we need later on.</p>
       <p>🕹️ Now find the  <b><i>“Package Manager”</i></b>window and start installing the packages I have listed.</p>
-      <p></p>
-      <p></p>
+      <p>📃<b><i>2D Sprite</i></b> (For UI designs)</p>
+      <p>📃<b><i>Cinemachine</i></b> (For easier camera control)</p>
+      <p>📃<b><i>DOTween (HOTween v2)</i></b> Install this from [Unity Asset Store](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676) </p>
       <p><i>Let's go to the next step.</i></p> 
       <img src="https://github.com/Ozlem-goksun/Jr_s_World_3d/blob/main/Tut/step1.png" alt="step1" style="max-width: 100%; height: auto;">
     </td>
