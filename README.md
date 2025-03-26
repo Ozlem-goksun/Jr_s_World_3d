@@ -10,8 +10,17 @@
       <p>📃<b><i>2D Sprite</i></b> (For UI designs)</p>
       <p>📃<b><i>Cinemachine</i></b> (For easier camera control)</p>
       <p>📃<b><i>DOTween (HOTween v2)</i></b> (Install this from <a href= "https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676">Unity Asset Store</a>)(This asset will help you with animations :))</p>
-      <p><i>So let's get started💥.</i></p> 
-      <img src="https://github.com/Ozlem-goksun/Jr_s_World_3d/blob/main/Tut/step1.png" alt="step1" style="max-width: 100%; height: auto;">
     </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+       <img src="https://github.com/Ozlem-goksun/Jr_s_World_3d/blob/main/Tut/step1.png" alt="step1" style="max-width: 50%; height: auto;">
+      <p>🕹️ Don't forget remove Physic / Physic2D modules from DOTween package 'cause we won't need them.</p>
+       <img src="https://github.com/Ozlem-goksun/Jr_s_World_3d/blob/main/Tut/step2_DOTween.gif" alt="step2" style="max-width: 50%; height: auto;">
+    </td>
+     <p><i>So let's get started💥.</i></p> 
   </tr>
 </table>
