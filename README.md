@@ -40,7 +40,11 @@
         <p><i>"I used my own model for this, but you can use the model from the file you just downloaded.I may use different assets during this project, but don't worry, there will be differences that you can handle.If you get stuck, you can contact me or get information from the video source with the link I shared at the beginning."</i></p>
         <p></p>
         <p>🕹️ Now add a ground to the scene on which your player can stand, for this you can click on the <b><i>"Hierarcy"</i></b> window and go to <b><i>“3D Object”</i></b> -> <b><i>“Plane”</i></b>.</p>
-        <p>🕹️ </p>
+        <p></p>
+        <p>🕹️ Now we need a <b><i>“Rigidbody”</i></b> to make our character move more in line with the laws of physics. For this, while your player is selected, click the <b><i>“Add Component”</i></b> button in the <b><i>“Inspector”</i></b> window and find the “Rigidbody” component with the help of the search bar. Make sure you don't select 2D;)</p>
+        <img src = "https://github.com/Ozlem-goksun/Jr_s_World_3d/blob/main/Tut/step4AddRigidbody.png" alt = "step4">
+        <p>🕹️ Yes, now your character may be ready to move more physically, but there is something we forgot.A <b><i>"Collider"</i></b>. Without a collider, your character cannot recognize other objects and cannot be recognized by them. You can add this component as you add rigidbody.I used capsule collider, but you can use whichever collider is most suitable for your character. Provided that it is not 2D :)</p>
+        <img src = "https://github.com/Ozlem-goksun/Jr_s_World_3d/blob/main/Tut/step5AddCollider.png" alt = "step5">
       </td>
     </tr>
   </table>
