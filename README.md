@@ -173,7 +173,8 @@ public class PlayerController : MonoBehaviour
       <p>🕹️ There is a property that I assume you have noticed. <b><i>“.normalized”</i></b>. So what does this property do?</p>
       <p>Normally, when we provide input in two directions simultaneously (e.g., along both the X and Y axes), the resulting combined vector (the diagonal) is longer than a unit vector along a single axis (just X or just Y).
         By using <b><i>".normalized"</i></b>, we keep the direction of this combined vector but scale its length down to a standard unit length of 1. This ensures our character moves at the same speed in all directions.</p>
-      <img src = "https://github.com/Ozlem-goksun/Jr_s_World_3d/blob/main/Tut/image.png" alt = ".normalized">
     </td>
   </tr>
 </table>
+
+[![.normalized Vector Explanation](https://raw.githubusercontent.com/Ozlem-goksun/Jr_s_World_3d/main/Tut/image.png)](https://discussions.unity.com/t/vector3-normalize-doesnt-work-but-normalized-does-why/695128/4)
