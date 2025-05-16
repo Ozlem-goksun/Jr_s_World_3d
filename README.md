@@ -61,3 +61,109 @@
       </td>
     </tr>
   </table>
+
+  ## 🎮 PlayerController.cs
+
+🕹️ This script, `PlayerController.cs`, is the core for controlling our player character. Below is the commented code explaining its functionality:
+
+```csharp
+// Standard Unity library for core functionalities.
+using UnityEngine;
+
+// Defines the PlayerController class, making it a Unity component.
+public class PlayerController : MonoBehaviour
+{
+    [Header("References")] // Inspector category for essential object links.
+
+    private Rigidbody playerRb; // Reference to the player's Rigidbody for physics-based movement.
+    [SerializeField] private Transform oriantationTransform; // Player's orientation (e.g., camera's forward) for relative movement. Assign in Inspector.
+
+    [Header("Movement Settings")] // Inspector category for movement parameters.
+
+    [SerializeField] private float playerSpeed; // Controls the player's movement speed. Adjust in Inspector.
+
+    [Header("Jump Settings")] // Inspector category for jumping parameters.
+
+    [SerializeField] private float jumpForce; // The force applied when the player jumps. Adjust in Inspector.
+    [SerializeField] private KeyCode jumpKey; // The key used to trigger a jump. Set in Inspector.
+    [SerializeField] private bool canJump; // Flag to determine if the player is currently able to jump.
+    [SerializeField] private float jumpCoolDown; // Cooldown time in seconds between jumps. Adjust in Inspector.
+
+    // Private variables to store raw input values.
+    private float horizontalInput, verticalInput;
+
+    // Stores the calculated direction for player movement.
+    private Vector3 movementDirection;
+
+    // Awake is called once when the script instance is being loaded (before Start).
+    private void Awake()
+    {
+        // Get the Rigidbody component attached to this GameObject.
+        playerRb = GetComponent<Rigidbody>();
+        // Freeze Rigidbody rotation to prevent unwanted tumbling.
+        playerRb.freezeRotation = true;
+        // Player can jump at the start of the game.
+        canJump = true;
+    }
+
+    // Update is called every frame.
+    private void Update()
+    {
+        // Process player inputs every frame.
+        Inputs();
+    }
+
+    // FixedUpdate is called every fixed framerate frame, ideal for physics calculations.
+    private void FixedUpdate()
+    {
+        // Apply physics-based movement in FixedUpdate for consistency.
+        PlayerMovement();
+    }
+
+    // Handles gathering and processing player inputs.
+    private void Inputs()
+    {
+        // Get raw horizontal (A/D, Left/Right Arrow) and vertical (W/S, Up/Down Arrow) input.
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+
+        // Check if the jump key is pressed and the player is allowed to jump.
+        if(Input.GetKey(jumpKey) && canJump)
+        {
+            canJump = false; // Prevent immediate re-jumping.
+            PlayerJumping(); // Execute the jump action.
+            // After 'jumpCoolDown' seconds, call 'ResetJumpingState' to allow jumping again.
+            Invoke(nameof(ResetJumpingState), jumpCoolDown);
+        }
+    }
+
+    // Manages the actual movement of the player based on input and orientation.
+    private void PlayerMovement()
+    {
+        // Calculate movement direction relative to the 'oriantationTransform' (e.g., camera direction).
+        movementDirection = (oriantationTransform.forward * verticalInput) + (oriantationTransform.right * horizontalInput);
+
+        // Apply force to the Rigidbody. '.normalized' ensures consistent speed in all directions.
+        // 'ForceMode.Force' provides a smooth, acceleration-based movement.
+        playerRb.AddForce(movementDirection.normalized * playerSpeed, ForceMode.Force);
+    }
+
+    // Executes the jump mechanics.
+    private void PlayerJumping()
+    {
+        // Reset vertical velocity before jumping to ensure consistent jump height.
+        // This prevents higher jumps if already moving upwards, or shorter jumps if falling.
+        playerRb.linearVelocity = new Vector3(playerRb.linearVelocity.x, 0.0f, playerRb.linearVelocity.z);
+
+        // Apply an immediate upward force for the jump.
+        // 'ForceMode.Impulse' is suitable for instantaneous forces like jumping.
+        playerRb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    }
+
+    // Called after the jump cooldown period to re-enable jumping.
+    private void ResetJumpingState()
+    {
+        canJump = true; // Allow the player to jump again.
+    }
+}
+```
