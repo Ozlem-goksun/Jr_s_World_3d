@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour
     <td>
       <p>🕹️ There is a property that I assume you have noticed. <b><i>“.normalized”</i></b>. So what does this property do?</p>
       <p>Normally, when we provide input in two directions simultaneously (e.g., along both the X and Y axes), the resulting combined vector (the diagonal) is longer than a unit vector along a single axis (just X or just Y).
-        By using <b><i>".normalized"</i></b>, we keep the direction of this combined vector but scale its length down to a standard unit length of 1. This ensures our character moves at the same speed in all directions.<i>(Click the image below for a more detail!)</i></p>
+        By using <b><i>".normalized"</i></b>, we keep the direction of this combined vector but scale its length down to a standard unit length of 1. This ensures our character moves at the same speed in all directions.<i>(Click the image below for more detail!)</i></p>
     </td>
   </tr>
 </table>
